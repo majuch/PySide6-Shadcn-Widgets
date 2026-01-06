@@ -36,9 +36,6 @@ Homepage = "https://github.com/majuch/PySide6-Shadcn-Widgets"
 Repository = "https://github.com/majuch/PySide6-Shadcn-Widgets"
 Issues = "https://github.com/majuch/PySide6-Shadcn-Widgets/issues"
 
-[tool.setuptools]
-packages = ["pyside6_shadcn_widgets"]
-
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["pyside6_shadcn_widgets*"]
