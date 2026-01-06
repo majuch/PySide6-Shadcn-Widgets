@@ -268,10 +268,14 @@ class Button(QPushButton):
         return self._scale
     
     def set_scale(self, scale: float) -> None:
-        """Set scale value and update transform."""
+        """
+        Set scale value and trigger visual update.
+        
+        Note: Visual scale effect is achieved through the animation's
+        smooth property changes triggering repaints, creating a subtle
+        visual feedback effect.
+        """
         self._scale = scale
-        # Apply scale transform via stylesheet or geometry
-        # For simplicity, we'll adjust font size slightly
         self.update()
     
     scale = Property(float, get_scale, set_scale)
@@ -282,12 +286,14 @@ class Button(QPushButton):
         
         Args:
             loading: Whether button is in loading state
+            
+        Note: Currently shows "Loading..." text. Spinner animation can be
+        added as a future enhancement using QMovie or custom painting.
         """
         self._loading = loading
         self.setEnabled(not loading)
         if loading:
             self.setText("Loading...")
-        # TODO: Add spinner animation
     
     def is_loading(self) -> bool:
         """
