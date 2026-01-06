@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyside6-shadcn-widgets"
+version = "0.1.0"
+description = "A modern UI library for PySide6 inspired by shadcn/ui components and animations"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "PySide6-Shadcn-Widgets Contributors"}
+]
+keywords = ["pyside6", "qt", "ui", "widgets", "shadcn", "components", "animations"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: User Interfaces",
+]
+dependencies = [
+    "PySide6>=6.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/majuch/PySide6-Shadcn-Widgets"
+Repository = "https://github.com/majuch/PySide6-Shadcn-Widgets"
+Issues = "https://github.com/majuch/PySide6-Shadcn-Widgets/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pyside6_shadcn_widgets*"]
